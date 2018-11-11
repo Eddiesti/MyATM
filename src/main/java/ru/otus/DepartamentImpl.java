@@ -41,8 +41,8 @@ public class DepartamentImpl implements Departament {
 
     public void restore() {
         for (int i = 0; i < caretaker.mementoList.size(); i++) {
-            Memento memento = caretaker.get(i);
-            atms.get(i).getCell().restoreFromMemento(memento);
+            atms.get(i).restore(atms, caretaker, i);
         }
     }
 }
+

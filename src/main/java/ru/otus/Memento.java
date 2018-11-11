@@ -1,18 +1,14 @@
 package ru.otus;
+
 public class Memento {
-    private final int count;
-    private final Cell.Nominal nominal;
+    private final Cell cell;
 
-    public int getCount() {
-        return count;
+    public Cell getCell() {
+        return cell;
     }
 
-    public Cell.Nominal getNominal() {
-        return nominal;
-    }
-
-    public Memento(int count, Cell.Nominal nominal) {
-        this.count = count;
-        this.nominal = nominal;
+    public Memento(Cell cell) {
+        this.cell = cell;
     }
 }
+

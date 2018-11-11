@@ -5,13 +5,12 @@ public class Cell {
     private Nominal nominal;
 
     public Memento saveToMemento() {
-        return new Memento(count, nominal);
-
+        return new Memento(new Cell(count, nominal));
     }
 
     public void restoreFromMemento(Memento memento) {
-        this.count = memento.getCount();
-        this.nominal = memento.getNominal();
+        this.count = memento.getCell().getCount();
+        this.nominal = memento.getCell().getNominal();
     }
 
     public enum Nominal {

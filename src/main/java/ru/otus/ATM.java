@@ -139,4 +139,9 @@ public class ATM {
         }
         return sum;
     }
+
+    public void restore(List<ATM> atms, Caretaker caretaker, int i) {
+        Memento memento = caretaker.get(i);
+        atms.get(i).getCell().restoreFromMemento(memento);
+    }
 }
